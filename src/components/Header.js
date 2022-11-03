@@ -1,5 +1,3 @@
-import image from "../photos/Will2.jpeg";
-
 export default function Header() {
   return (
     <div className="header">
