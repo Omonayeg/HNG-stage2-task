@@ -54,11 +54,11 @@ export default function Button() {
       {/* {"Join Zuri today and get this Free Book on Design"} */}
 
       <div className="socials">
-        <a href="">
+        <a href="https://app.slack.com/client/T02VDR8G849/C02UY8WMB8V">
           <img className="logo1" src={slack} alt="logo" />
         </a>
 
-        <a href="">
+        <a href="https://github.com/Omonayeg">
           <img className="logo1" src={github} alt="logo" />
         </a>
       </div>

@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="formBox">
       <form>
         <h2>Contact Me</h2>
-        <p>Hi there, contact me to ask me about anythibg you have in mind.</p>
+        <p>Hi there, contact me to ask me about anything you have in mind.</p>
 
         <div className="name-section">
           <div className="fname-section">
