@@ -1,15 +1,37 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./styles.css";
 
-import Home from "./pages/Home";
-import Contact from "./pages/contact";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Home from "../src/pages/Home";
+import Contact from "../src/pages/Contact";
+import Footer from "../src/components/Footer";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={<Home />} exact />
-        <Route path="/contact" component={<Contact />} />
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
+}
+
+{
+  /* <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router> */
 }

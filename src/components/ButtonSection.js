@@ -1,4 +1,11 @@
-export default function Header() {
+import { useNavigate } from "react-router-dom";
+
+import slack from "../photos/slack.png";
+import github from "../photos/Icon.png";
+
+export default function Button() {
+  const navigate = useNavigate();
+
   return (
     <div className="btn-container">
       <button className="btn" id="btn__zuri">
@@ -34,10 +41,27 @@ export default function Header() {
         {/* {"Join Zuri today and get this Free Book on Design"} */}
       </button>
 
-      <button className="btn" id="contact">
-        <a href="/contact">Contact me</a>
-        {/* {"Join Zuri today and get this Free Book on Design"} */}
-      </button>
+      <a
+        href="/contact"
+        className="btn"
+        id="contact"
+        onClick={() => {
+          navigate("/contact");
+        }}
+      >
+        Contact me
+      </a>
+      {/* {"Join Zuri today and get this Free Book on Design"} */}
+
+      <div className="socials">
+        <a href="">
+          <img className="logo1" src={slack} alt="logo" />
+        </a>
+
+        <a href="">
+          <img className="logo1" src={github} alt="logo" />
+        </a>
+      </div>
     </div>
   );
 }
