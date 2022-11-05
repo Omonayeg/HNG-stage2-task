@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 
+import React, { useState } from "react";
+
 export default function Contact() {
+  const [message, setMessage] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (message.length == 0) {
+      setError(true);
+    }
+    if (message) {
+      console.log(message);
+    }
+  };
+
   return (
     <div className="formBox">
-      <form>
+      <form id="form" onSubmit={handleSubmit}>
         <h2>Contact Me</h2>
         <p>Hi there, contact me to ask me about anything you have in mind.</p>
 
@@ -39,15 +55,18 @@ export default function Contact() {
           placeholder="yourname@email.com"
           required
         />
-
+        {/* <div> */}
         <label>Message</label>
         <textarea
           name="msg"
           id="message"
           cols="20"
           rows="10"
+          onChange={(e) => setMessage(e.target.value)}
           placeholder="Send me a message and I'll reply you as soon as possible..."
         ></textarea>
+        {error && message.length <= 0 ? <h4>Please enter a message</h4> : ""}
+        {/* </div> */}
 
         <label>
           <input type="checkbox" />
