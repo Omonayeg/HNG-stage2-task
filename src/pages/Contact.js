@@ -4,12 +4,12 @@ import React, { useState } from "react";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
-  const [lastName, setLastName] = useState("");
+  // const [lastName, setLastName] = useState("");
   const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (message.length == 0) {
+    if (message.length === 0) {
       setError(true);
     }
     if (message) {
