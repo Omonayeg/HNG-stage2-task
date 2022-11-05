@@ -15,6 +15,7 @@ export default function Contact() {
               id="first_name"
               name="firstname"
               placeholder="Enter your first name"
+              required
             />
           </div>
 
@@ -25,6 +26,7 @@ export default function Contact() {
               id="last_name"
               name="lastname"
               placeholder="Enter your last name"
+              required
             />
           </div>
         </div>
@@ -35,6 +37,7 @@ export default function Contact() {
           id="email"
           name="email"
           placeholder="yourname@email.com"
+          required
         />
 
         <label>Message</label>
