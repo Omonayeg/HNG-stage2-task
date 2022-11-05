@@ -22,16 +22,3 @@ export default function App() {
   );
 }
 
-{
-  /* <Router>
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router> */
-}

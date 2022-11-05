@@ -3,7 +3,9 @@ import logo from "../photos/I4G.png";
 export default function Footer() {
   return (
     <div>
+      <hr />
       <div className="footer">
+        {/* <hr/> */}
         <img
           className="logo1"
           src="https://zuri.team/img/zuri-logo-full.svg"
